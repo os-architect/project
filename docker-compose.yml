@@ -1,0 +1,12 @@
+version: '3.2'
+
+services:
+  jenkins:
+    image: bitnami/jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    privileged: true
+    volumes:
+      - /home/jenkins:/bitnami
+    container_name: jenkins
